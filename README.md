@@ -18,7 +18,7 @@ Nota: Para hacerlo de las formas **1.2.** o **1.3.** debe verificar si ya tiene 
 
 * ***Módulo 1:*** Introducción al entorno de trabajo de R
 
-  + ***clase-01:*** Introducción a R. [[Ver presentación aquí]](https://lectures-r/lecture_1/#/)
+  + ***clase-01:*** Introducción a R. [[Ver presentación aquí]](https://lectures-r.gitlab.io/202201/lecture-1/)
 
   + ***clase-02:*** Rstudio y GitHub
   
