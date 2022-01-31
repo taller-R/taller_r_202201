@@ -1,4 +1,4 @@
-![GitHub](https://img.shields.io/github/license/taller-R/taller_r-202201) [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/taller-R/taller_r-202201/issues) ![](https://img.shields.io/github/followers/taller-R?style=social)
+![GitHub](https://img.shields.io/github/license/taller-R/taller_r_202201) [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/taller-R/taller_r_202201/issues) ![](https://img.shields.io/github/followers/taller-R?style=social)
 
 <img src="https://avatars0.githubusercontent.com/u/69440432?s=400&u=96b3e58c713578b563d5c3d3c259f34965ac8e33&v=4" align="right" width=120 height=120 alt="" />
 
@@ -19,9 +19,23 @@ Nota: Para hacerlo de las formas **1.2.** o **1.3.** debe verificar si ya tiene 
 * ***Módulo 1:*** Introducción al entorno de trabajo de R
 
   + ***clase-01:*** Introducción a R. [[Ver presentación aquí]](https://lectures-r.gitlab.io/202201/lecture-1/)
+    
+     + Acerca del curso
 
-  + ***clase-02:*** Rstudio y GitHub
+     + ¿Usar R?
+
+     + Configuración inicial
+
+     + Introducción al entorno R
+
+  + ***clase-02:*** Rstudio y GitHub [[Ver presentación aquí]](https://lectures-r.gitlab.io/202201/lecture-2/)
   
+     + Espacio de trabajo
+     
+     + Directorio de trabajo
+  
+     + GitHub
+     
   + ***clase-03:*** Estructuras de datos en R. 
   
 * ***Módulo 2:*** Tidyverse
