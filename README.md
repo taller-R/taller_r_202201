@@ -30,11 +30,13 @@ Nota: Para hacerlo de las formas **1.2.** o **1.3.** debe verificar si ya tiene 
 
   + ***clase-02:*** Rstudio y GitHub [[Ver presentación aquí]](https://lectures-r.gitlab.io/202201/lecture-2/)
   
-     + Espacio de trabajo
-     
-     + Directorio de trabajo
-  
-     + GitHub
+     + Entorno de trabajo en Rstudio 
+
+     + Directorio de trabajo y proyectos
+
+     + Git y GitHub
+
+     + Rstudio + GitHub
      
   + ***clase-03:*** Estructuras de datos en R. 
   
