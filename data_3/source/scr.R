@@ -6,8 +6,8 @@
 
 # configuracion inicial (comentario prueba max)
 rm(list = ls()) # limpia el entorno de R
-install.packages(pacman) # Instalar las libreria
-require(pacman) # Llamar las librerias
+install.packages("pacman") # Instalar las libreria
+require("pacman") # Llamar las librerias
 p_load(dplyr,data.table) # Instlar/Llamar librerias
 print('No fijamos un WD porque estamos trabajando en un R-project')
 
@@ -26,7 +26,7 @@ list.files(path = '.' , pattern = '.md') # vector nombres archivos markdown (.md
 #====================#
 
 # lógico
-vector_l = c(NA,TRUE,FALSE)
+vector_l = c(NA,TRUE,T,FALSE,F)
 is.logical(vector_l)
 
 # character
@@ -53,6 +53,9 @@ cat("puedo consultar el tipo de datos que contiene un objeto usando la función 
 # [3.] Estructura de datos #
 #==========================#
 
+# clean environment
+rm(list=ls())
+
 #--------------------------------------
 # Dim |  Homogeneos	 |  Heterogeneos  |
 #--------------------------------------
@@ -77,16 +80,14 @@ num = c(2,4,6,7,8,9) # los numeros no tiene que ser continuos
 files = list.files()
 
 # Matriz
-matriz = matrix(num, ncol = 3,  nrow = 2 )
+matriz = matrix(data = num, ncol = 3,  nrow = 2)
 df = data.frame(matriz)
-matriz
+df
 
 ## Listas 
 
 #lista              
-lista = list()
-lista[[1]] = abe
-lista[[2]] = log
+lista = list("vector_caracter"=abe,"vector_logico"=log)
 lista[[3]] = num
 lista[[4]] = matriz # matriz que creamos anteriormente
 lista[[5]] = df # dataframe que creamos anteriormente
@@ -110,7 +111,6 @@ abe
 abe[-5] # Eliminar elemento 5
 
 abe[1:3] # Pedir los 3 primeros elementos
-
 
 ## Manipular matrices
 
@@ -169,6 +169,7 @@ lista[[4]] # LLamamos el dato que deseamos
 
 lista[[4]][,2] # seleccionar columna dentro de la matiz
 
+names(lista)
 names(lista) = c("vector_character","vector_logical","vector_numerico","matriz","df")
 lista
 
