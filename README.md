@@ -42,8 +42,16 @@ Nota: Para hacerlo de las formas **1.2.** o **1.3.** debe verificar si ya tiene 
   
 * ***Módulo 2:*** Tidyverse
 
-  + ***clase-04:*** Tidy-data parte 1 
+  + ***clase-04:*** Introducción a la limpieza de datos [[Ver presentación aquí]](https://lectures-r.gitlab.io/202201/lecture-4/)
+  
+     + Diferencia entre tidy y raw data
 
+     + Importar y exportar conjuntos de datos (librería rio)
+
+     + Operador pipe (%>%)
+
+     + Adicionar variables
+    
   + ***clase-05:*** Tidy-data parte 2
 
   + ***clase-06:*** Tidy-data parte 3
