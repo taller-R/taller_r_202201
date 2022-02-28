@@ -8,7 +8,9 @@ Sys.setlocale("LC_CTYPE", "en_US.UTF-8") # Encoding UTF-8
 
 # install/load packages
 require(pacman)
-p_load(janitor,rio,skimr,png,grid)
+p_load(janitor,rio,skimr,png,grid,conflicted)
+conflict_prefer(name = "filter", winner = "dplyr")
+conflict_prefer(name = "select", winner = "dplyr")
 
 # verifiquemos directorio
 getwd()
@@ -68,7 +70,8 @@ cat("`select()` selecciona columnas de un dataframe o un tibble,
 
 #------------------------------#
 ## Seleccionar variables
-db = tibble(iris) %>% mutate(Species=as.character(Species))
+db = tibble(iris) %>% mutate(Species=as.character(Species),
+                             Species_1=as.character(Species))
 
 db
 
@@ -84,7 +87,7 @@ df = db %>% select(Petal.Length , Petal.Width , Species)
 ## Seleccionar variables usando partes del nombre)
 
 #### variables que comienzan con sepal
-db %>% select(starts_with("Sepal"),Species)
+db %>% select(starts_with("Sepal"))
 db %>% select(ends_with("Length"),Species) # finalizan
 
 #### variables que terminan con width
@@ -105,7 +108,7 @@ db %>% select_if(is.numeric)
 ## Cambiar títulos de las variables 
 cat("Usando select all se cambia los nombres a minuscula")
 db %>% select_all(tolower) 
-
+db %>% rename(var_1=Sepal.Length,var_3=Petal.Length)
 
 #------------------------------#
 ## Seleccionar variables usando un vector
@@ -130,7 +133,7 @@ grid.raster(readPNG("pics/operadores_logicos.png"))
 
 #### importar datos
 db = read.csv("https://nyc-tlc.s3.amazonaws.com/trip+data/green_tripdata_2020-12.csv") %>%    
-  select(passenger_count:payment_type) %>% tibble()
+     select(passenger_count:payment_type) %>% tibble()
 
 #### Informacion extra de los datos
 browseURL("https://www1.nyc.gov/site/tlc/about/tlc-trip-record-data.page") # source
@@ -153,6 +156,7 @@ db %>% subset(trip_distance > 5)  # Distancia del viaje mayor a 5 millas
 
 
 cat("usando la funcion `filter()` de la librería `dplyr`")
+filter(.data = db, passenger_count > 3) # Más de 3 pasajeros
 db %>% filter(passenger_count > 3) # Más de 3 pasajeros
 
 #------------------------------#
@@ -164,5 +168,6 @@ cat(" filas con valores faltantes en la variable `passenger_count`")
 db = db %>% drop_na(passenger_count)
 
 is.na(db$passenger_count) %>% tabyl() # número de observaciones faltantes
+
 
 
